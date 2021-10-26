@@ -268,21 +268,25 @@ export class ContactsService {
 
       return {
         statusCode: HttpStatus.OK,
-        message: 'Lista de contactos por categorias',
+        message: 'Lista de microcreditos por categorias',
         data: {
-          inApp: contactInAppData,
-          favoriteInApp: contactFavoriteInAppData,
-          notInApp: contactNotInApp,
+          //inApp
+          forUsers: contactInAppData,
+          //favoriteInApp
+          forShops: contactFavoriteInAppData,
+          //notInApp: contactNotInApp,
         },
       };
     } else {
       return {
         statusCode: HttpStatus.OK,
-        message: 'Lista de contactos por categorias',
+        message: 'Lista de microcreditos por categorias',
         data: {
-          inApp: [],
+          forUsers: [],
+          forShops: [],
+          /* inApp: [],
           favoriteInApp: [],
-          notInApp: [],
+          notInApp: [], */
         },
       };
     }

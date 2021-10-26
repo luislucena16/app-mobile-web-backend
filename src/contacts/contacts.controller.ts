@@ -38,7 +38,7 @@ import {
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { ContactApp } from '../entity/contactsApp.entity';
 
-@ApiTags('Contacts')
+@ApiTags('Contacts and Microcredits')
 @Controller('contacts')
 export class ContactsController {
   constructor(private readonly contactService: ContactsService) {}
@@ -148,11 +148,11 @@ export class ContactsController {
     return this.contactService.updateContact(payload, user);
   }
 
-  @Get('/ContactsByCategory')
+  @Get('/MicroCreditsByCategory')
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
   @ApiOperation({
-    description: 'Ver lista completa de contactos',
+    description: 'Ver lista completa',
   })
   @ApiCreatedResponse({
     type: ContactsByCategoryResponse,

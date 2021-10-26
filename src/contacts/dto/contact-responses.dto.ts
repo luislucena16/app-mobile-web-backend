@@ -8,9 +8,11 @@ class ContactsInAppData extends User {
   contact: ContactApp;
 }
 class ContactsByCategoryData {
-  inApp: ContactsInAppData[];
-  favoriteInApp: ContactsInAppData[];
-  notInApp: ContactApp[];
+  //inApp
+  forUsers: ContactsInAppData[];
+  //favoriteInApp
+  forShops: ContactsInAppData[];
+  //notInApp: ContactApp[];
 }
 export class ContactsResponse extends DefaultResponsesDto {
   @ApiProperty()
